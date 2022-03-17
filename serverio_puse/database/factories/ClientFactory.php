@@ -11,12 +11,20 @@ class ClientFactory extends Factory
      *
      * @return array
      */
+
     public function definition()
     {
+        $test_data = [
+            'Optimized grid-enabled moderator',
+            'Centralized eco-centric parallelism',
+            'Right-sized fault-tolerant application'
+        ];
+
         return [
             'name' => $this->faker->firstName(),
             'surname' => $this->faker->lastName(),
-            'description' => $this->faker->paragraph(3, true)
+            'description' => $this->faker->paragraph(3, true),
+            'company_title' => $test_data[rand(0, 2)]
         ];
     }
 }

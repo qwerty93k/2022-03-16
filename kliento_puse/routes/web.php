@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/clients', function () {
     return view('client.index');
 });
+
+Route::get('', 'App\Http\Controllers\ClientController@index')->name('client.index');
